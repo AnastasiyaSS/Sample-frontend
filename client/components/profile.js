@@ -1,18 +1,35 @@
-import React from 'react'
-import { Link, useParams } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { connect } from 'react-redux'
+import { useParams, Link } from 'react-router-dom'
+import { bindActionCreators } from 'redux'
+import axios from 'axios'
+
 import Head from './head'
+import Header from './header'
 
 const Profile = () => {
-  const { user } = useParams()
+  const { userName } = useParams()
+  const [repos, setRepos] = useState([ ])
+
+  useEffect(() => {
+    axios.get(`https://api.github.com/users/${userName}/repos`).then(it => {
+      setRepos(it.data.map((repo) => repo.name))
+    })
+  }, [userName])
+
   return (
-    <div>
+    <div className="flex flex-col h-screen">
       <Head title="Hello" />
-      <div className="flex items-center justify-center h-screen">
-        <div className="bg-indigo-800 hover:text-red-500 text-white font-bold rounded-lg border shadow-lg p-10">
-          <div id="title">Profile</div>
-          <div><Link to="/dashboard/">Go To Root</Link></div>
-          <div><Link to="/dashboard/main">Go To Main</Link></div>
-          <div id="username">{ user }</div>
+      <Header />
+      <div className="flex flex-grow justify-center items-center">
+        <div className="bg-indigo-800 text-white font-regular rounded-lg border shadow-lg p-10">
+          {repos.map(item => {
+            return <div key={item} className="hover:text-blue-500">
+              <Link to={`/${userName}/${item}`}>
+                {item}
+              </Link>
+            </div>
+          })}
         </div>
       </div>
     </div>
@@ -21,4 +38,8 @@ const Profile = () => {
 
 Profile.propTypes = {}
 
-export default React.memo(Profile)
+const mapStateTOProps = () => ({})
+
+const mapDispatchToProps = (dispatch) => bindActionCreators({}, dispatch)
+
+export default connect(mapStateTOProps, mapDispatchToProps)(Profile)
