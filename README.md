@@ -47,8 +47,9 @@
 You will write your app in this folder. You will spend most of your time in here.
 
 #### `client/components`
-
-This folder contains all your components
+Components root.js, form.js, head.js, header.js, profile.js and readme.js are creating an app which can represent the list of GitHub repositories of the certain user.
+- Learned how to build routes and navigation within the app, how to work with Tailwind.
+- One of the most complicated things was to fit all the parts on the page using Tailwind. So they would be placed in correct relevance. 
 
 #### `dist/assets`
 This directory contains compiled project files
