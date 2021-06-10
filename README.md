@@ -45,7 +45,7 @@
 #### `client/components`
 Components root.js, form.js, head.js, header.js, profile.js and readme.js are creating an app which can represent the list of GitHub repositories of the certain user.
 
-1. Learned how to build routes and navigation within the app, how to work with Tailwind.
+1. Learned how to build routes and navigation within the app, how to work with Tailwind. Also it was great to practice on how to work with useState/useEffect/useParams.
 
 2. One of the most complicated things was to fit all the parts on the page using Tailwind. So they would be placed in correct relevance.
 
