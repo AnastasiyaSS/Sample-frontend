@@ -42,10 +42,6 @@
 
 ## Project Structure
 
-#### `client/`
-
-You will write your app in this folder. You will spend most of your time in here.
-
 #### `client/components`
 Components root.js, form.js, head.js, header.js, profile.js and readme.js are creating an app which can represent the list of GitHub repositories of the certain user.
 
