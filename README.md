@@ -48,8 +48,10 @@ You will write your app in this folder. You will spend most of your time in here
 
 #### `client/components`
 Components root.js, form.js, head.js, header.js, profile.js and readme.js are creating an app which can represent the list of GitHub repositories of the certain user.
-- Learned how to build routes and navigation within the app, how to work with Tailwind.
-- One of the most complicated things was to fit all the parts on the page using Tailwind. So they would be placed in correct relevance. 
+
+1. Learned how to build routes and navigation within the app, how to work with Tailwind.
+
+2. One of the most complicated things was to fit all the parts on the page using Tailwind. So they would be placed in correct relevance.
 
 #### `dist/assets`
 This directory contains compiled project files
@@ -136,15 +138,3 @@ yarn run lint:server
 ```
 
 Will analyse only  `server/**/**.js` files
-
-#### Docker
-Nginx web server working on 443, 80 ports on localhost
-
-```run production
-docker-compose -f .\docker\PROD.docker-compose.yml up (Options: --build for build, -d to detach )
-docker-compose -f .\docker\PROD.docker-compose.yml down (To stop contaiters)
-```
-```run develop
-docker-compose -f .\docker\DEV.docker-compose.yml up (Options: --build for build, -d to detach )
-docker-compose -f .\docker\DEV.docker-compose.yml down (To stop contaiters)
-```
