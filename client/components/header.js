@@ -7,12 +7,12 @@ const Header = () => {
   const { userName, repositoryName } = useParams()
   return (
     <div className="flex flex-col max-h-full">
-      <div className="flex items-center justify-between bg-indigo-800 text-white font-normal p-6">
+      <div className="flex justify-between bg-indigo-800 shadow-lg text-white font-normal p-6">
         <div id="repository-name" className="uppercase">
           {userName}
         </div>
         {typeof repositoryName !== 'undefined' ? (
-          <div id="go-repository-list ">
+          <div id="go-repository-list">
             <Link to={`/${userName}`}>REPOSITORY LIST</Link>
           </div>
         ) : (

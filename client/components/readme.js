@@ -22,8 +22,8 @@ const ReadMe = () => {
   return (
     <div className="flex flex-col max-h-full">
       <Header />
-      <div className="flex flex-grow justify-between break-all items-center p-6">
-        <div id="description" className="markdown-body">
+      <div className="flex flex-grow justify-start p-6">
+        <div id="description" className="min-w-full markdown-body">
           <ReactMarkdown>{repos}</ReactMarkdown>
         </div>
       </div>
