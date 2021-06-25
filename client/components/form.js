@@ -16,12 +16,14 @@ const Form = () => {
 
   return (
     <div className="flex flex-col h-screen">
-      <div className="flex flex-grow justify-center items-center">
-        <div className="bg-indigo-800 text-white font-light rounded-lg border shadow-lg p-10 space-y-4">
-          <div className="space-y-4">
+      <div className="flex flex-grow justify-center items-center bg-gray-50">
+        <div className="bg-gray-800 shadow-xl rounded-lg p-10 space-y-4">
+          <label htmlFor="label" className="text-gray-200 font-light">
             What`s your username?
+          </label>
+          <div>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-free focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border-2 rounded w-full py-2 px-3 text-gray-700 leading-free focus:outline-none focus:shadow-outline"
               id="input-field"
               type="text"
               placeholder="Username"
@@ -31,7 +33,7 @@ const Form = () => {
           </div>
           <div>
             <button
-              className="bg-blue-500 hover:bg-blue-700 text-white font-normal py-2 px-4 rounded-full"
+              className="bg-indigo-500 text-gray-900 hover:bg-indigo-700 hover:text-white shadow-md font-normal py-3 px-5 rounded-full"
               id="search-button"
               type="button"
               onClick={historyClick}

@@ -22,13 +22,13 @@ const Profile = () => {
       <Head title="Hello" />
       <Header />
       <div className="flex flex-grow justify-center items-center">
-        <div className="bg-indigo-800 text-white font-regular rounded-lg border shadow-lg p-10">
-          {repos.map(item => {
-            return <div key={item} className="hover:text-blue-500">
-              <Link to={`/${userName}/${item}`}>
-                {item}
-              </Link>
-            </div>
+        <div className="bg-gray-800 text-white font-regular rounded-lg border space-y-4 shadow-xl p-10">
+          {repos.map((item) => {
+            return (
+              <div key={item} className="hover:text-indigo-400 ">
+                <Link to={`/${userName}/${item}`}>{item}</Link>
+              </div>
+            )
           })}
         </div>
       </div>
